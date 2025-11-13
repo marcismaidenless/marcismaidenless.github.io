@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#2C0F12, #6B1E23);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.converter {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #8ec5fc;
+    box-shadow: 0 0 12px rgba(142,197,252,0.4);
+}
+
+/* Button */
+button {
+    background: linear-gradient(135deg, #2C0F12, #6B1E23);
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0d0405, #0d0405);
+    transform: translateY(-2px);
+}
+
+.result {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(240, 244, 248, 0.7);
+    margin-top: 10px;
+    transition: 0.3s;
+}
