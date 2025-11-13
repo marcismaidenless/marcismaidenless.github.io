@@ -1,3 +1,4 @@
+/* Reset & font */
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body with animated radial gradient */
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: radial-gradient(#2C0F12, #6B1E23);
@@ -15,84 +18,70 @@ body {
     animation: gradientBG 10s ease infinite;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.converter {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(12px);
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    width: 100%;
-    max-width: 400px;
+/* Container for the tax calculator */
+.tax-container {
     text-align: center;
     color: #fff;
-    animation: fadeIn 2s ease forwards;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 2.5s ease forwards;
+    width: 350px;
 }
 
-h2 {
+/* Headings */
+.tax-container h2 {
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     animation: glow 7s ease-in-out infinite alternate;
 }
 
-label {
-    display: block;
-    text-align: left;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #fff;
-}
-
-input, select {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
+/* Labels & input */
+.tax-container label {
     font-size: 1rem;
-    transition: box-shadow 0.3s ease;
+    margin-bottom: 8px;
+    display: block;
 }
 
-input:focus, select:focus {
-    box-shadow: 0 0 12px rgba(142,197,252,0.5);
-}
-
-button {
+.tax-container input {
     width: 100%;
-    padding: 12px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Button styling */
+.tax-container button {
+    padding: 10px 25px;
     border-radius: 12px;
     border: none;
+    background: #8B1E23;
+    color: #fff;
     font-weight: 500;
     cursor: pointer;
-    background: linear-gradient(135deg, #2C0F12, #6B1E23);
-    color: #fff;
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-button:hover {
-    background: linear-gradient(135deg, #0d0405, #0d0405);
-    transform: translateY(-2px);
+.tax-container button:hover {
+    background: #b02c35;
+    transform: scale(1.05);
 }
 
+/* Result display */
 .result {
+    margin-top: 20px;
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-weight: 500;
     animation: fadeIn 1.5s ease forwards;
 }
 
+/* Animations */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -102,4 +91,10 @@ button:hover {
     0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
     50% { text-shadow: 0 0 15px #8ec5fc, 0 0 30px #764ba2; }
     100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

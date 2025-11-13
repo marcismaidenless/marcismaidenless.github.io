@@ -56,10 +56,11 @@ p {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-.my-image {
+.logo {
   width: 200px;
   height: auto;
   margin-bottom: .3in;
   animation: fadeIn 1s ease-in;
+transition: transform 0.3s ease;
 }
 
