@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/payroll.css">
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/payroll.js" defer></script>
+</head>
+<body>
+
+  <div class="payroll-container">
+    <h2>Payroll System</h2>
+
+    <div class="form-group">
+      <label for="emp-name">Employee Name</label>
+      <input type="text" id="emp-name" placeholder="Enter employee name">
+    </div>
+
+    <div class="form-group">
+      <label for="days-worked">Days Worked</label>
+      <input type="number" id="days-worked" placeholder="Enter days worked">
+    </div>
+
+    <div class="form-group">
+      <label for="daily-rate">Daily Rate</label>
+      <input type="number" id="daily-rate" placeholder="Enter daily rate">
+    </div>
+
+    <div class="form-group">
+      <label for="deduction">Deduction Amount</label>
+      <input type="number" id="deduction" placeholder="Enter deduction">
+    </div>
+
+    <button id="add-btn">Add Employee</button>
+    <button id="delete-btn">Delete Employee</button>
+
+    <table id="payroll-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Employee Name</th>
+          <th>Days Worked</th>
+          <th>Daily Rate</th>
+          <th>Gross Pay</th>
+          <th>Deduction Amount</th>
+          <th>Net Pay</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
