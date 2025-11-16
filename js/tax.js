@@ -1,4 +1,3 @@
-// tax.js
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('compute-btn');
   const incomeInput = document.getElementById('taxable-income');

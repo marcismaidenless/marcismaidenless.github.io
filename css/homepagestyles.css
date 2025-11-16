@@ -56,11 +56,65 @@ p {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-.logo {
-  width: 200px;
-  height: auto;
-  margin-bottom: .3in;
-  animation: fadeIn 1s ease-in;
-transition: transform 0.3s ease;
+
+.homepage-logo {
+  width: 220px;
+  cursor: pointer;
+  transition: transform .3s ease;
 }
 
+.homepage-logo:hover {
+  transform: scale(1.05);
+}
+
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn .3s ease;
+}
+
+.video-content {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+.video-wrap {
+  width: 80vw;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

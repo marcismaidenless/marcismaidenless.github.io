@@ -1,4 +1,3 @@
-// assignment3.js
 document.addEventListener('DOMContentLoaded', () => {
     const inputN = document.getElementById('input-n');
     const factorialSpan = document.getElementById('factorial');

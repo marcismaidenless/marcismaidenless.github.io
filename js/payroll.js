@@ -1,4 +1,3 @@
-// payroll.js
 document.addEventListener('DOMContentLoaded', () => {
     const empName = document.getElementById('emp-name');
     const daysWorked = document.getElementById('days-worked');
